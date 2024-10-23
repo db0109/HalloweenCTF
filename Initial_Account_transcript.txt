@@ -1,0 +1,267 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20241015135128
+Username: MYLAB\Steve.Slade
+RunAs User: MYLAB\Steve.Slade
+Configuration Name: 
+Machine: PC1 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 1716
+PSVersion: 5.1.19041.1682
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1682
+BuildVersion: 10.0.19041.1682
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\steve.slade\Documents\Transcript\Transcript.txt.txt
+PS C:\Windows\Panther> cd C:\Windows\Panther\
+PS C:\Windows\Panther> ls
+
+
+    Directory: C:\Windows\Panther
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/13/2024   8:55 PM                actionqueue
+d-----         9/22/2024   2:24 PM                FastCleanup
+d-----         9/13/2024   8:53 PM                setup.exe
+d-----         9/13/2024   8:53 PM                UnattendGC
+-a----         9/13/2024   9:53 PM          45989 cbs.log
+-a----         9/13/2024   9:53 PM          44896 cbs_unattend.log
+-a----         9/13/2024   9:53 PM             68 Contents0.dir
+-a----         9/13/2024   8:55 PM             68 Contents1.dir
+-a----         9/13/2024   8:53 PM            796 DDACLSys.log
+-a----         9/13/2024   8:55 PM           6031 diagerr.xml
+-a----         9/13/2024   8:55 PM          19449 diagwrn.xml
+-a----         9/13/2024   9:53 PM          28834 MainQueueOnline0.que
+-a----         9/13/2024   8:55 PM          27478 MainQueueOnline1.que
+-a----         9/13/2024   7:57 PM         462848 setup.etl
+-a----         9/13/2024   8:01 PM        2087273 setupact.log
+-a----         9/13/2024   8:55 PM            136 setuperr.log
+-a----         9/13/2024   8:55 PM         385280 setupinfo
+-a----         9/13/2024   7:56 PM           9661 unattend.xml
+
+
+PS C:\Windows\Panther> get-data .\unattend.xml
+get-data : The term 'get-data' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-data .\unattend.xml
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-data:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-data : The term 'get-data' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and
+try again.
+At line:1 char:1
++ get-data .\unattend.xml
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-data:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Windows\Panther> get-content .\unattend.xml
+<?xml version='1.0' encoding='utf-8'?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+
+    <settings pass="windowsPE" wasPassProcessed="true">
+        <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+            <InputLocale>en-US</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UserLocale>en-US</UserLocale>
+            <!-- UILanguage must match the installation media language.  Stuff like de-CH does not work for
+                 example de_windows_7_enterprise_with_sp1_x64_dvd_u_677649.iso.  However, stupidly we cannot
+                 omit this element (kudos to brilliant minds at MS).  -->
+            <UILanguage>en-US</UILanguage>
+        </component>
+
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+
+            <DiskConfiguration>
+                <WillShowUI>OnError</WillShowUI>
+                <Disk>
+                    <DiskID>0</DiskID>
+                    <WillWipeDisk>true</WillWipeDisk>
+
+                    <CreatePartitions>
+                        <!-- TODO: Use the standard partitioning scheme at starting with Windows 8 maybe, using 2 partitions as described by Microsoft? -->
+                        <CreatePartition>
+                            <Order>1</Order>
+                            <Type>Primary</Type>
+                            <Extend>true</Extend>
+                        </CreatePartition>
+                    </CreatePartitions>
+
+
+                </Disk>
+            </DiskConfiguration>
+
+            <UserData>
+                <ProductKey>*SENSITIVE*DATA*DELETED*</ProductKey>
+                <AcceptEula>true</AcceptEula>
+            </UserData>
+
+            <ImageInstall>
+                <OSImage>
+                    <InstallFrom>
+                        <!-- TODO: This stuff doesn't work for en_windows_vista_enterprise_sp1_x64_and_x86.iso ... -->
+                        <MetaData wcm:action="add">
+                            <Key>/IMAGE/INDEX</Key>
+                            <Value>1</Value>
+                        </MetaData>
+                        <!-- <Path>d:\sources\install.wim</Path> - the w7 tests doesn't specify this -->
+                    </InstallFrom>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+
+                        <PartitionID>1</PartitionID>
+
+
+                    </InstallTo>
+                    <WillShowUI>OnError</WillShowUI>
+                    <InstallToAvailablePartition>false</InstallToAvailablePartition>
+                </OSImage>
+            </ImageInstall>
+
+            <ComplianceCheck>
+                <DisplayReport>OnError</DisplayReport>
+            </ComplianceCheck>
+
+            <!-- Apply registry tweaks to Windows PE, skipping the checks in the Windows 11 setup program. This will not make it to the final install, and should do no harm with older Windows versions. -->
+            <RunAsynchronous>
+                <RunAsynchronousCommand>
+                    <Order>1</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassCPUCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable CPU check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>2</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable RAM check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>3</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable Secure Boot check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>4</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassStorageCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable Storage check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>5</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable TPM check</Description>
+                </RunAsynchronousCommand>
+            </RunAsynchronous>
+
+        </component>
+    </settings>
+
+    <settings pass="specialize" wasPassProcessed="true">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+            <ComputerName>PC1</ComputerName>
+        </component>
+
+        <component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+
+            <!-- Apply registry tweaks in the final Windows install, skipping the checks in the Windows 11 setup program. This means upgrades started in this install will work without compatibility complaints. -->
+            <RunAsynchronous>
+                <RunAsynchronousCommand>
+                    <Order>1</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassCPUCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable CPU check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>2</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable RAM check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>3</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable Secure Boot check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>4</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassStorageCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable Storage check</Description>
+                </RunAsynchronousCommand>
+                <RunAsynchronousCommand>
+                    <Order>5</Order>
+                    <Path>reg.exe ADD HKLM\SYSTEM\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1 /f</Path>
+                    <Description>Windows 11 disable TPM check</Description>
+                </RunAsynchronousCommand>
+            </RunAsynchronous>
+        </component>
+    </settings>
+
+    <settings pass="oobeSystem" wasPassProcessed="true">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+            <AutoLogon>
+                <Password>*SENSITIVE*DATA*DELETED*</Password>
+                <Enabled>true</Enabled>
+                <Username>vboxuser</Username>
+            </AutoLogon>
+
+            <UserAccounts>
+
+                <AdministratorPassword>*SENSITIVE*DATA*DELETED*</AdministratorPassword>
+
+                <LocalAccounts>
+                    <LocalAccount wcm:action="add">
+                        <Name>vboxuser</Name>
+                        <DisplayName>vboxuser</DisplayName>
+                        <Group>administrators;users</Group>
+                        <Password>*SENSITIVE*DATA*DELETED*</Password>
+                    </LocalAccount>
+                </LocalAccounts>
+
+
+            </UserAccounts>
+
+            <VisualEffects>
+                <FontSmoothing>ClearType</FontSmoothing>
+            </VisualEffects>
+
+            <OOBE>
+                <ProtectYourPC>3</ProtectYourPC>
+                <HideEULAPage>true</HideEULAPage>
+                <SkipUserOOBE>true</SkipUserOOBE>
+                <SkipMachineOOBE>true</SkipMachineOOBE>
+                <!-- Make this (NetworkLocation) default to public and make it configurable -->
+                <NetworkLocation>Home</NetworkLocation>
+            </OOBE>
+
+            <FirstLogonCommands>
+                <SynchronousCommand wcm:action="add">
+                    <!-- For which OS versions do we need to do this? -->
+                    <Order>1</Order>
+                    <Description>Turn Off Network Selection pop-up</Description>
+                    <CommandLine>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Network\NewNetworkWindowOff"</CommandLine>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <Order>2</Order>
+                    <Description>VirtualBox post guest install steps </Description>
+                    <CommandLine>cmd.exe /c A:\VBOXPOST.CMD --vista-or-newer</CommandLine>
+                </SynchronousCommand>
+            </FirstLogonCommands>
+
+            <TimeZone>Mountain Standard Time</TimeZone>
+        </component>
+
+    </settings>
+</unattend>
+PS C:\Windows\Panther> runas /user:vboxuser cmd.exe
+Enter the password for vboxuser:
+Attempting to start cmd.exe as user "PC1\vboxuser" ...
+PS C:\Windows\Panther> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20241015135324
+**********************
+
+

